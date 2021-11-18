@@ -1,0 +1,141 @@
+.App {
+  height: 100vh;
+  width: 100%;
+
+  .header{
+    height: 100px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    // border: 1px red solid;
+
+    .slogan{
+      letter-spacing: 6px;
+      font-size: 40px;
+      font-weight: 500;
+      color: #fc75b2;
+      text-shadow: 1px 1px 0 #ff56a2,
+                  2px 2px 0 #ff56a2,
+                  3px 3px 0 #ff80b9,
+                  4px 4px 0 #ff80b9,
+                  5px 5px 0 #ff80b9,
+                  6px 6px 0 #ff80b9;
+    }
+
+      .app_memu {
+        display: block;
+        background-attachment:fixed;
+        background-image: 
+        radial-gradient(closest-side, #ff92d0, rgba(235, 105, 78, 0)),
+        radial-gradient(closest-side, #f42a81, rgba(0, 0, 0, 0)),
+        radial-gradient(closest-side, rgb(243, 223, 125), rgba(254, 234, 131, 0)),
+        radial-gradient(closest-side, rgb(44, 230, 255), rgba(0, 0, 0, 0)),
+        radial-gradient(closest-side, rgb(255, 158, 79), rgba(0, 0, 0, 0));
+        box-shadow: 1px -1px 0 #ff9bd4 inset,
+                    2px -2px 0 #ff9bd4 inset,
+                    3px -3px 0 #ff9bd4 inset,
+                    4px -4px 0 #ff9bd4 inset;
+        border-radius: 10vw;
+        background-size:
+          16.6rem 40rem,
+          16.6rem 40rem,
+          16.6rem 40rem,
+          16.6rem 40rem,
+          16.6rem 40rem;
+        background-position:
+          0% 50%,
+          20% 50%,
+          40% 50%,
+          60% 50%,
+          80% 50%;
+        animation: 8s movement linear infinite;
+        .app_memu::-webkit-scrollbar {
+          display: none;
+        }   
+      }
+  }
+
+  .content-area{
+    height: calc(100% - 100px);
+    padding: 20px;
+  }
+
+  .show-area{
+    margin: 20px 0;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    .show-form{
+      width: 500px;
+      padding: 20px;
+      border: 1px solid grey;
+      .header{
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+@keyframes movement {
+
+  0%,
+  100% {
+    background-size:
+      10rem 10rem,
+      16.6rem 80rem,
+      16.6rem 20rem,
+      16.6rem -30rem,
+      16.6rem 110rem;
+    background-position:
+      0% 50%,
+      20% 50%,
+      40% 50%,
+      60% 50%,
+      80% 50%;
+  }
+
+  25% {
+    background-size:
+      16.6rem 80rem,
+      16.6rem 30rem,
+      16.6rem 90rem,
+      16.6rem 70rem,
+      16.6rem 60rem;
+    background-position:
+      25% 50%,
+      45% 50%,
+      65% 50%,
+      85% 50%,
+      5% 50%;
+  }
+
+  50% {
+    background-size:
+      16.6rem 60rem,
+      16.6rem 70rem,
+      16.6rem 50rem,
+      16.6rem 90rem,
+      16.6rem -20rem;
+    background-position:
+      50% 50%,
+      70% 50%,
+      90% 50%,
+      10% 50%,
+      30% 50%;
+  }
+
+  75% {
+    background-size:
+      16.6rem -40rem,
+      16.6rem 110rem,
+      16.6rem -30rem,
+      16.6rem 60rem,
+      16.6rem 50rem;
+    background-position:
+        75% 50%,
+        95% 50%,
+        15% 50%,
+        35% 50%,
+        55% 50%;
+  }
+}

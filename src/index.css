@@ -1,0 +1,141 @@
+body {
+  width : 100vw;
+  height: 100vh;
+}
+
+body {
+  width           : 100vw;
+  height          : 100vh;
+  margin          : 0;
+  background-color: #e493d0;
+  background-image:
+    radial-gradient(closest-side, rgba(235, 105, 78, 1), rgba(235, 105, 78, 0)),
+    radial-gradient(closest-side, #f42a81, rgba(243, 11, 164, 0)),
+    radial-gradient(closest-side, rgba(254, 234, 131, 1), rgba(254, 234, 131, 0)),
+    radial-gradient(closest-side, #b366f7, rgba(170, 142, 245, 0)),
+    radial-gradient(closest-side, rgba(248, 192, 147, 1), rgba(248, 192, 147, 0));
+  background-size:
+    130vmax 130vmax,
+    80vmax 80vmax,
+    90vmax 90vmax,
+    110vmax 110vmax,
+    90vmax 90vmax;
+  background-position:
+    -80vmax -80vmax,
+    60vmax -30vmax,
+    10vmax 10vmax,
+    -30vmax -10vmax,
+    50vmax 50vmax;
+  background-repeat         : no-repeat;
+  animation                 : 10s movement linear infinite;
+  /* z-index                : -1; */
+}
+
+body::after {
+  content                   : '';
+  display                   : block;
+  position                  : fixed;
+  width                     : 100%;
+  height                    : 100%;
+  top                       : 0;
+  left                      : 0;
+  backdrop-filter           : blur(10px);
+  -webkit-backdrop-filter   : blur(10px);
+  /* z-index                : -1; */
+}
+
+#root {
+  position: relative;
+  z-index : 1000 !important;
+}
+
+sup {
+  position           : fixed !important;
+  display         : block;
+  width              : 50px;
+  height             : 50px;
+  background-image   : linear-gradient(to right top, #ff87c5, #ec8ed6, #d595e2, #bc9ce9, #a4a2eb, #90acf3, #7cb6f8, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+  transform          : translate(-50%, -50%);
+  box-shadow         : 0 0 3px #f42981 inset;
+  pointer-events     : none;
+  border-radius      : 100%;
+  animation          : animate 2s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    width  : 0px;
+    height : 0px;
+    opacity: 0.5;
+  }
+
+  100% {
+    width  : 16vw;
+    height : 16vw;
+    opacity: 0;
+  }
+}
+
+@keyframes movement {
+
+  0%,
+  100% {
+    background-size:
+      130vmax 130vmax,
+      80vmax 80vmax,
+      90vmax 90vmax,
+      110vmax 110vmax,
+      90vmax 90vmax;
+    background-position:
+      -80vmax -80vmax,
+      60vmax -30vmax,
+      10vmax 10vmax,
+      -30vmax -10vmax,
+      50vmax 50vmax;
+  }
+
+  25% {
+    background-size:
+      100vmax 100vmax,
+      90vmax 90vmax,
+      100vmax 100vmax,
+      90vmax 90vmax,
+      60vmax 60vmax;
+    background-position:
+      -60vmax -90vmax,
+      50vmax -40vmax,
+      0vmax -20vmax,
+      -40vmax -20vmax,
+      40vmax 60vmax;
+  }
+
+  50% {
+    background-size:
+      80vmax 80vmax,
+      110vmax 110vmax,
+      80vmax 80vmax,
+      60vmax 60vmax,
+      80vmax 80vmax;
+    background-position:
+      -50vmax -70vmax,
+      40vmax -30vmax,
+      10vmax 0vmax,
+      20vmax 10vmax,
+      30vmax 70vmax;
+  }
+
+  75% {
+    background-size:
+      90vmax 90vmax,
+      90vmax 90vmax,
+      100vmax 100vmax,
+      90vmax 90vmax,
+      70vmax 70vmax;
+    background-position:
+      -50vmax -40vmax,
+      50vmax -30vmax,
+      20vmax 0vmax,
+      -10vmax 10vmax,
+      40vmax 60vmax;
+  }
+}
