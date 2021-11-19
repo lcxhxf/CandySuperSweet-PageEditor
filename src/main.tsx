@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './App'
-import './index.css'
+import '../src/assets/index.less'
 
 
 window.addEventListener('click', (e) => {
@@ -12,13 +12,12 @@ window.addEventListener('click', (e) => {
   // const container = document.createElement('div')
   const container = document.createElement('div')
 
+  let ripples = document.createElement('sup')
   for (let i = 0; i < 3; i++) {
     setTimeout(() => {
-      let ripples = document.createElement('sup')
       ripples.style.left = `${x}px`
       ripples.style.top = `${y}px`
       container.appendChild(ripples)
-
       setTimeout(() => {
         ripples.remove()
       }, 2000);
